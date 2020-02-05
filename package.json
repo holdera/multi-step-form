@@ -1,0 +1,19 @@
+{
+	"name": "Multistep-Form",
+	"version": "0.0.1",
+	"description": "A multistep form",
+	"main": "scripts.js",
+	"scripts": {
+		"start": "browser-sync start --directory --server --files \"*.css, *.html, *.js\""
+	},
+	"devDependencies": {
+		"browser-sync": "^2.26.7",
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.2.0",
+		"gulp-sass": "^4.0.2",
+		"path": "^0.12.7"
+	},
+	"dependencies": {
+		"normalize-scss": "^7.0.1"
+	}
+}

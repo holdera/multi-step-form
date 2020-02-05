@@ -1,0 +1,18 @@
+$pgBackground: 		#f2f2f2;
+$formBackground: 	#ffffff;
+$fontColor:			#111111;
+$btncolor:			#660a8e;
+$headingColor:		$btncolor;
+
+$mainColor:			#E8095C;
+$blue:				#0977E8;
+$teal: 				#0AFF99;
+$white:				#fff;
+
+@import 'base/mixins';
+@import 'base/normalize';
+@import 'base/general';
+
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/form-one';
