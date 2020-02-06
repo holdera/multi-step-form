@@ -1,0 +1,61 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Accordion</title>
+	<link rel="stylesheet" type="text/css" href="../assets/styles/sass/styles.css">
+</head>
+<body>
+
+<div class="accordion-wrapper">
+	<p> These are the places to go to and to avoid during a Zombie Outbreak</p>
+	<ul aria-label="accordion-controls" class="accordion__panel">
+		<li>
+			<button aria-controls="text-1" aria-expanded="false" id="accordion__panel-1">Malls</button>
+			<div class="content" aria-hidden="true" id="text-1">
+				<p>Malls are a terrible place to hide from Zombies. There are too many exits. You will find yourself trapped</p>
+			</div>
+		</li>
+		<li>
+			<button aria-controls="text-2" aria-expanded="false" id="accordion__panel-2">Islands</button>
+			<div class="content" aria-hidden="true" id="text-2">
+				<p>Now getting to an island will be hard during a zombie outbreak. If you find yourself on a island, you may feel safer because of isolation. However, zombies are dead, and you may have these ghouls washing up along the shore :(</p>
+			</div>
+		</li>
+		<li>
+			<button aria-controls="text-3" aria-expanded="false" id="accordion__panel-3">Cities</button>
+			<div class="content" aria-hidden="true" id="text-3">
+				<p>Terrible idea. huge population, this is where you want to avoid. People always come to the big cities hoping they'll be safe when its actually the most dangerous of the dense population and how fast the "disease" can spread.</p>
+			</div>
+		</li>
+		<li>
+			<button aria-controls="text-4" aria-expanded="false" id="accordion__panel-4">The Arctic</button>
+			<div class="content" aria-hidden="true" id="text-4">
+				<p>Yes its cold, but the cold will freeze the dead and theres a small amount of people in the arctic so its less likely to be crawling around with zombies.</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	const btns = document.querySelectorAll('button');
+
+	function toggleAccordion(btn) {
+		const content = this.nextElementSibling;
+		
+		if ( this.getAttribute('aria-expanded') === 'false' ) {
+			this.setAttribute('aria-expanded', 'true');
+			content.setAttribute('aria-hidden', false);
+			content.style.display = 'block';
+		} else if ( this.getAttribute('aria-expanded') === 'true' ) {
+			this.setAttribute('aria-expanded', 'false');
+			content.setAttribute('aria-hidden', 'true');
+			content.style.display = 'none';
+		}
+	}
+
+	btns.forEach(btn => btn.addEventListener('click', toggleAccordion));
+
+</script>
+	
+</body>
+</html>

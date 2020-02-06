@@ -517,3 +517,34 @@ body {
     margin: 0; }
   .complete-form p {
     line-height: 1.5; }
+
+.accordion-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; }
+  .accordion-wrapper .accordion__panel {
+    padding: 0; }
+    .accordion-wrapper .accordion__panel li {
+      list-style-type: none;
+      border-bottom: 1px solid #E8095C;
+      border-right: 1px solid #E8095C;
+      border-left: 1px solid #E8095C;
+      margin-bottom: 10px; }
+    .accordion-wrapper .accordion__panel button {
+      background: #E8095C;
+      color: #fff;
+      font-size: 16px;
+      display: block;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      padding: 10px 8px;
+      border: none;
+      transition: all .3s ease-out; }
+    .accordion-wrapper .accordion__panel .content {
+      display: none;
+      list-style-type: none;
+      padding: 0 10px;
+      transition: all .3s ease-out; }
+      .accordion-wrapper .accordion__panel .content p {
+        color: #111; }
